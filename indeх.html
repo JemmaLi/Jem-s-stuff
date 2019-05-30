@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jem's stuff</title>
+	<!---<autor>JemmaLi</autor>--->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+	<header>
+	   <h1>Копилка разного стаффа, типо творчества</h1>
+   </header>
+	<div class="container col-lg-12" align="center"> 
+		<aside class="l-side">
+	       <ul>
+		        <h4>Немного обо мне:</h4>
+		        <li>недо-художник</li>
+		        <li>недо-музыкант</li>
+		        <li>недо-писатель и поет</li>
+		        <li>сериаломан</li>
+		        <li>дама с бОльшими заморочками</li>
+		        <li>просто хороший человек</li>
+	       </ul>
+       </aside>
+	  <article>
+	  	   <div> 
+		       <h4>"Отличный" фотограф, или мой Кременчуг</h4> <!---переделать под себя-->
+	           <img id="currentPhoto" src="images/photo1.jpg" alt="photo1">
+           </div>
+           <button onclick="showPreviousPhoto()">Предыдущая</button>
+           <button onclick="showNextPhoto()">Следующая</button>
+           <h4>Монтаж из восьмого класса в студию!</h4>
+           <div class="embed-responsive embed-responsive-16by9">
+	           <video  controls="controls">
+	           		<source src="video/joy.ogv" type='video/ogg; codecs="theora, vorbis"'>
+					<source src="video/joy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+					<source src="video/joy.webm" type='video/webm; codecs="vp8, vorbis"'>
+	           </video>
+	       </div>
+      </article>
+ </div>
+	
+	 	
+
+	 
+<div class="container">
+ <footer>
+ 	Ссылки на соцсети, если очень надо:
+	 	<a href="https://www.instagram.com/sashkapolly/?hl=uk" target="_blank"><img src="images/ins.png" alt="instagram"></a>
+			<a href="#"><img src="images/tele.jpg" alt="telegram"></a>
+			<a href="#"><img src="images/face.png" alt="facebook"></a>
+			<a href="https://ficbook.net/authors/2003089"><img src="images/fic.png" alt="ficbook"></a>
+ 	
+ </footer>
+	
+</div>	
+
+
+	<script>
+	/*var a =3;
+	var b=10;
+	var c;
+	c=a+b;
+	alert(c);*/
+	var photosCount = 5;
+	var currentPhotoIndex = 1;
+    function showNextPhoto(){
+    currentPhotoIndex++;
+    if(currentPhotoIndex==photosCount+1){
+    	currentPhotoIndex=1;
+    }	
+    
+    var elem = document.getElementById("currentPhoto");
+    elem.src = "images/photo" + currentPhotoIndex + ".jpg";
+    }
+    function showPreviousPhoto(){
+    	currentPhotoIndex--;
+    	if(currentPhotoIndex==0){
+    		currentPhotoIndex=photosCount;
+    	}
+    	var elem = document.getElementById("currentPhoto");
+    	elem.src = "images/photo" + currentPhotoIndex + ".jpg";
+
+    }
+</script>
+	
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
