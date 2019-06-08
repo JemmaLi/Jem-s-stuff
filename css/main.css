@@ -2,71 +2,121 @@
 	margin:0;
 	padding:0; 
 }
-body{
-	/*background-color:#FFCCCC;*/
-		background-image: url(images/sashka.jpg);
-	}
-header{
-	width: 100%;
-	height: 50px;
-	text-align: center;
-	}
 
- .container{
-	display: inline-block;	
+header, .footer-align{
+	text-align: left;
+	position: sticky !important;
+	top:0 !important;
+	height: 100px;
+	z-index: 1;
+	line-height: 100px;
 }
-ul{
+
+h1{
+	color:lightgray;
+	display: inline-block;
+  	vertical-align: middle;
+  	line-height: normal;
+}
+
+.form-control, .btn{
+	height: 40px;
+	vertical-align: middle;
+}
+
+.form-control{
+	display: inline-block;
+}
+
+.btn{
+	background-color:lightgreen;
+	color:black;
+	border-color:green; 
+}
+
+.btn:hover{
+	background-color:#00CC00;
+	color:black;
+	border-color:#00CC00; 
+}
+
+.about{
 	list-style-type:none;
 }
 
-.l-side{
-	position: relative;
-	float: left;
-	width: 20%;
-	height:640px;
-	
+.about>li{
+	height:46px;
+	line-height: 26px;
+	border:1px solid lightgray;
+	background-color: rgba(255,255,255,0.3);
+	padding: 10px;
 }
-article{
-	position: relative;
-	float: left;
-	width: 60%;
-	height:640px;
+
+.about>li>i{
+	margin-right:10px;
+}
+
+#l-side{
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/sashka.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:600px;
+	position: sticky;
+	top:100px;
+}
+
+.bg-glance{
+	width: 100%;
+	height: 100%;
+	padding: 2px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.art-container{
+	margin:0 !important;
+	padding:0 !important;
+}
+
+#carouselExampleIndicators, article{
+	z-index: 0;	
+}
+
+#carouselExampleIndicators{
+	background-color: lightgray;
+}
+
+h4{
 	text-align: center;
-	/*overflow: hidden;*/
 }
 
- /*.aside{
-	width: 7%;
-	/*position: fixed;*/
-	/*z-index: 1;
-	flex-direction: row;
-}*/
+.carousel{
+	height: 300px;
+}
 
+.carousel-item>img{
+	height:250px;
+	margin-top: 25px;
+}
 
+hr{
+	border-width: 5px;
+	border-color:lightgray;;
+}
 
- /*.main{
-	margin-top: 10px;
-	text-align: left;
-	overflow: hidden;
-} */
-
-
-
- article>img{
-	display: inline-block;
-	margin-right:5px;
-	margin-bottom: 10px;
-	/*float:left;*/
- }
-
-   img{
-	padding:10px;
-	width:10%;
-  }
+.footer-align{
+	text-align: center;
+}
 
 footer{
-	width: 100%;
-	display: inline-block;
-	text-align: center;
+	height:100px;
+}
 
+footer img{
+	width: 50px;
+}
+
+footer a{
+	margin-right: 30px;
 }
